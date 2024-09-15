@@ -1,10 +1,13 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
+const authRouters = require('./routers/auth')
 const productRouters = require('./routers/product')
 const userRouters = require('./routers/user')
+const commentRouters = require('./routers/comment')
+const orderRouters = require('./routers/order')
 
 require('dotenv').config()
 
@@ -20,10 +23,11 @@ app.use((req, res, next) => {
     next();
 })
 
-
+app.use('/auth', authRouters)
 app.use('/product', productRouters)
+app.use('/comment', commentRouters)
 app.use('/user', userRouters)
-
+app.use('/order', orderRouters)
 
 const PORT = process.env.PORT || 8080
 
