@@ -15,6 +15,22 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
+    author: {
+        type: String,
+        required: true
+    },
+    nxb: {
+        type: String,
+        required: true
+    },
+    releaseYear: {
+        type: Number,
+        required: true
+    },
+    pages: {
+        type: Number,
+        required: true
+    },
     description: {
         type: String,
         required: true

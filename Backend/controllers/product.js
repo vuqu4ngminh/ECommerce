@@ -30,6 +30,10 @@ exports.addProduct = async (req, res) => {
             name: name,
             price: price,
             imageUrl: imageUrl,
+            author: author,
+            nxb: nxb,
+            releaseYear: releaseYear,
+            pages: pages,
             description: description,
             quantity: quantity,
             status: status
@@ -49,6 +53,10 @@ exports.updateProduct = async (req, res) => {
             name: name,
             price: price,
             imageUrl: imageUrl,
+            author: author,
+            nxb: nxb,
+            releaseYear: releaseYear,
+            pages: pages,
             description: description,
             quantity: quantity,
             status: status
